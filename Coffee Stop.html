@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CofeeStop</title>
+    <!-- font awesome cdn link  -->
+    <!-- <link rel="icon" href="coffee icon2.png"> -->
+    <link rel="icon" href="./coffee stop images/coffeelogo3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="Coffee Stop.css">
+    <link rel="stylesheet" href="Coffee Stop2.css">
+    <script src="Coffee Stop.js" defer></script>
+    <script src="Coffee Stop2.js" defer></script>
+</head>
+
+<body>
+
+    <!-- header section starts -->
+    <header class="header">
+        <a href="#" class="logo">
+            <!-- <img src="Coffee-Stop-Brown-01 logo.jpg"  id="coffelogo" alt="CofeeStoplogo"> -->
+            <!-- <img src="https://cdn-icons-png.flaticon.com/512/590/590836.png"  id="coffelogo" alt="CofeeStoplogo"> -->
+            <!-- <img src=" https://cdn-icons-png.flaticon.com/512/590/590836.png " width="256" height="256" alt title class="img-small"> -->
+            <!-- <img src="coffeefinallogo.png" id="coffelogo" alt="CofeeStoplogo" style="mix-blend-mode: inherit;"> -->
+            <img src="./coffee stop images/coffeelogo3.png" id="coffeelogo" alt="coffee stop logo">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#products">Bestseller</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class=" cart fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <!-- <div class="cart"> -->
+        <!-- <div class=" cart fas fa-shopping-cart" id="cart-btn"></div> -->
+        <!-- <p id="count">0</p>
+    </div> -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search">
+                <!-- <select name="coffee" id="coffee">
+                <option value="latte">Latte</option>
+                <option value="capauchino">Cappachiono</option>
+            </select> -->
+                <!-- <ul id="list">
+                <li>tea</li>
+                <li>shake</li>
+                <li>coffee</li>
+            </ul> -->
+            </label>
+        </div>
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <div class="head">
+                    <p>My Cart</p>
+                </div>
+                <div id="cartItem">your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">Rs.0.00</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>COFFEE STOP </h3>
+            <p>“A place for coffee, friends, and fun.
+                The best way to start your day!”</p>
+            <a class="btn" href="#">
+                <span>Get yours now</span>
+                <span>
+                    <svg width="40px" height="40px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path class="one"
+                                d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                fill="#FFFFFF"></path>
+                            <path class="two"
+                                d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                fill="#FFFFFF"></path>
+                            <path class="three"
+                                d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- home section ends  -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+        <h1 class="heading">
+            <span>About</span> Us
+        </h1>
+        <div class="row">
+            <div class="image">
+                <!-- <img src="CoffeeAbout.png" alt=""> -->
+                <!-- <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/104018.jpg" style="height: 500px; width: 500px;"> -->
+                <!-- <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/100441.jpg"
+                     alt="about us"> -->
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/104014.jpg" alt="about us">
+                <!-- style="height: 450px; width: 370px; -->
+            </div>
+            <div class="content">
+                <h3>What makes our coffee special ;)</h3>
+                <p>Coffee is a beverage prepared from roasted coffee beans. Darkly colored, bitter, and slightly acidic,
+                    coffee has a stimulating effect on humans, primarily due to its caffeine content. It has the highest
+                    sales in the world market for hot drinks.</p>
+                <p>The seeds of the Coffea plant's fruits are separated to produce unroasted green coffee beans. The
+                    beans are roasted and then ground into fine particles that are typically steeped in hot water before
+                    being filtered out, producing a cup of coffee. It is usually served hot, although chilled or iced
+                    coffee is common.</p>
+                <a href="https://en.wikipedia.org/wiki/Coffee" target="_blank" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section ends  -->
+
+    <h1 class="heading"> Our <span>menu</span></h1>
+    <!-- menu section starts  -->
+
+    <section class="menu" id="menu">
+        <!-- <h1 class="heading"> Our <span>menu</span></h1> -->
+    </section>
+
+    <!-- menu section ends  -->
+
+    <!-- products section starts  -->
+
+    <section class="products" id="products">
+        <h1 class="heading">best<span>sellers</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="icons">
+                    <!-- <a href="#" class="fas fa-shopping-cart"></a> -->
+                    <a href="#products" class="fas fa-heart" id="heart-btn" onclick="changeColor()"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/108177.jpg"
+                        alt="product1">
+                </div>
+                <div class="content">
+                    <h3>Creamy Spinach and Corn Pocket</h3>
+                    <p>"A creamy spinach and corn filling encased in a buttery French style dough".</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Rs.246 <span>Rs.280</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icons">
+                    <!-- <a href="#products" class="fas fa-shopping-cart"></a> -->
+                    <a href="#products" class="fas fa-heart" id="heart-btn" onclick="changeColor()"></a>
+                    <a href="#products" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/104362.jpg"
+                        alt="product1">
+                </div>
+                <div class="content">
+                    <h3>Egg White and Chicken In Multigrain Croiss</h3>
+                    <p>"Fluffy egg white omlette and chicken ham sandwiched in multigrain croissant."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Rs.383 <span>Rs.420</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icons">
+                    <!-- <a href="#products" class="fas fa-shopping-cart"></a> -->
+                    <a href="#products" class="fas fa-heart" id="heart-btn" onclick="changeColor()"></a>
+                    <a href="#products" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/107704.jpg"
+                        alt="product1">
+                </div>
+                <div class="content">
+                    <h3>New York Cheesecake</h3>
+                    <p>"The Classic New York Cheese cake with a rich, creamy satiny texture and a crumbly biscuit base.
+                        An all time coffee house favourite."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Rs.404 <span>Rs.440</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icons">
+                    <!-- <a href="#products" class="fas fa-shopping-cart"></a> -->
+                    <a href="#products" class="fas fa-heart" id="heart-btn" onclick="changeColor()"></a>
+                    <a href="#products" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/100075.jpg"
+                        alt="product1">
+                </div>
+                <div class="content">
+                    <h3>Blueberry Muffins</h3>
+                    <p>"The Classic New York Cheese cake with a rich, creamy satiny texture and a crumbly biscuit base.
+                        An all time coffee house favourite."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Rs.320 <span>Rs.380</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icons">
+                    <!-- <a href="#products" class="fas fa-shopping-cart"></a> -->
+                    <a href="#products" class="fas fa-heart" id="heart-btn" onclick="changeColor()"></a>
+                    <a href="#products" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/107707.jpg"
+                        alt="product1">
+                </div>
+                <div class="content">
+                    <h3>Double Chocolate Chip Cookie</h3>
+                    <p>"A soft & chewy chocolate cookie topped with chocolate chips for the perfect textured bite."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">Rs.294 <span>Rs.320</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icons">
+                    <!-- <a href="#products" class="fas fa-shopping-cart"></a> -->
+                    <a href="#products" class="fas fa-heart" id="heart-btn" onclick="changeColor()"></a>
+                    <a href="#products" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/109270.jpg"
+                        alt="product1">
+                </div>
+                <div class="content">
+                    <h3>Butter Croissant</h3>
+                    <p>"A flaky and buttery French style pastry served with butter."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">Rs.288 <span>Rs.300</span></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- product section ends  -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+        <h1 class="heading">Customer's <span>review</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1098.png" alt="customer's profile" class="quote">
+                <p>Lyrically sweet, stunningly deep, engagingly complex. Dried black cherry, black sage, wild honey
+                    sandalwood, honeysuckle in aroma and cup. Juicy-bright structure with malic (green-apple-like)
+                    acidity; luscious, satiny mouthfeel. Integrated, multi-layered, flavor-saturated finish.</p>
+                <img src="./coffee stop images/profileimage1.jpg" class="user" alt="user profile">
+                <h3>lily miller</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1098.png" alt="customer's profile" class="quote">
+                <p>Exceptionally balanced, elegant, resonantly spice-toned. Red currant, butterscotch, hazelnut butter,
+                    honeysuckle, sandalwood in aroma and cup. Sweet-toned structure with sweetly tart, vivacious
+                    acidity; lively, creamy-smooth mouthfeel. The long, resonant finish carries over all the aromas and
+                    flavors of the cup.</p>
+                <img src="./coffee stop images/profileimage2.jpg" class="user" alt="user profile">
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1098.png" alt="customer's profile" class="quote">
+                <p>Evaluated as espresso. Aromatic orchid, dark chocolate, black cherry, gently scorched sandalwood,
+                    tarragon in aroma and small cup. Creamy-smooth mouthfeel; resonant, complex, long finish. In three
+                    parts milk, floral and fruit tones harmonize with dark chocolate for a particularly complex
+                    cappuccino.</p>
+                <img src="./coffee stop images/profileimage3.jpg" class="user" alt="user profile">
+                <h3>gwen stacy</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1098.png" alt="customer's profile" class="quote">
+                <p>Ultra-high-toned, fruit-driven, richly floral. Wisteria, dried nectarine, pistachio brittle,
+                    calamansi lime, tarragon in aroma and cup. Deeply sweet structure with resoundingly bright, lively
+                    acidity; delicately silky, viscous mouthfeel. Long, floral-toned finish supported by bittersweet
+                    citrus.</p>
+                <img src="./coffee stop images/profileimage4.jpg" class="user" alt="user profile">
+                <h3>rachel green</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1098.png" alt="customer's profile" class="quote">
+                <p>Richly floral, fruit-toned, balanced. Passion fruit, pink peppercorn, star jasmine, cocoa nib,
+                    sandalwood in aroma and cup. Sweetly tart structure with vibrant acidity; syrupy, viscous mouthfeel.
+                    The spicy-floral finish leads with notes of star jasmine and cocoa nib.</p>
+                <img src="./coffee stop images/profileimage5.jpg" class="user" alt="user profile">
+                <h3>dua lipa</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1098.png" alt="customer's profile" class="quote">
+                <p>Richly chocolaty, harmoniously juicy and bright. Dark chocolate fudge, pomelo, star jasmine, cedar,
+                    marjoram in aroma and cup. Sweet-savory structure with complex, bittersweet acidity; full, creamy
+                    mouthfeel. Resonant, long, flavor-laden finish.</p>
+                <img src="./coffee stop images/profileimage6.jpg" class="user" alt="user profile">
+                <h3>sadie sink</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- review section ends  -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> us</h1>
+        <div class="row">
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14997.262482394824!2d4.8866786!3d52.368542350000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609b93ca121b3%3A0xbed88e5f7e11dae5!2sGreenhouse%20Effect%20Coffeeshop%20Amsterdam!5e1!3m2!1sen!2sin!4v1690355772422!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>"
+
+            <form id="form" action="" onsubmit="return validation()">
+                <h3>Get in touch</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="username"/>
+                </div>
+                <div id="fusername" class="error"></div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div id="femail" class="error"></div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <label for="number">Number:</label>
+                    <input type="text" id="number" name="number">
+                </div>
+                <div id="fnumber" class="error"></div>
+                <input type="submit" value="Contact Now" class="btn" onclick="save_data()">
+                <!-- <button type="submit" value="Contact Now" class="btn" onclick=""></button> -->
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- contact section ends  -->
+
+    <!-- blogs section starts  -->
+    <section class="blogs" id="blogs">
+        <h1 class="heading"> our <span>blogs</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="https://detailed.com/images/sprudge.jpg" alt="blog1">
+                </div>
+                <div class="content">
+                    <a href="https://sprudge.com/" class="title">Sprudge</a>
+                    <span>by admin /29th december, 2020</span>
+                    <p>Sprudge is one of the world's most popular coffee publications, showcasing global hub coffee
+                        culture and original journalism since 2009.
+
+                    </p>
+                    <a href="https://sprudge.com/" target="_blank" class="btn">read more</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://detailed.com/images/daily-coffee-news.jpg" alt="blog2">
+                </div>
+                <div class="content">
+                    <a href="https://dailycoffeenews.com/" class="title">Daily Coffee News</a>
+                    <span>by admin /21st may, 2021</span>
+                    <p>The blog covers coffee news from seed to cup, including coffee origins, imports, exports,
+                        logistics, supply chains, sustainability, retail, baristas, roasting and consumer trends.</p>
+                    <a href="https://dailycoffeenews.com/" target="_blank" class="btn">read more</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="https://detailed.com/images/your-dream-coffee.jpg" alt="blog3">
+                </div>
+                <div class="content">
+                    <a href="Your Dream Coffee" class="title">Your Dream Coffee</a>
+                    <span>by admin /31st march, 2021</span>
+                    <p>On this coffee blog, you will find everything you need in order to start brewing coffee at home.
+                        Ranging from the basics; to the newest coffee recipes everybody talks about.</p>
+                    <a href="https://yourdreamcoffee.com/" target="_blank" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog section ends  -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>responsibility</h4>
+                    <ul>
+                        <li><a href="#">community</a></li>
+                        <li><a href="#">ethical sourcing</a></li>
+                        <li><a href="#">environment</a></li>
+                        <li><a href="#">diversity</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" class="fab fa-facebook-f" target="_blank"></a>
+                        <a href="https://www.twitter.com" class="fab fa-twitter" target="_blank"></a>
+                        <a href="https://www.instagram.com" class="fab fa-instagram" target="_blank"></a>
+                        <a href="https://www.linkedin.com" class="fab fa-linkedin" target="_blank"></a>
+                        <a href="https://www.pinterest.com" class="fab fa-pinterest" target="_blank"></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="share">
+            <!-- <h4>follow us</h4> -->
+            <a href="https://www.facebook.com" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="https://www.twitter.com" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://www.linkedin.com" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://www.pinterest.com" class="fab fa-pinterest" target="_blank"></a>
+        </div>
+    </section>
+    <div class="credit"><span>&#169; </span>copyright | all rights are reserved</div>
+    <!-- footer sectiom ends  -->
+</body>
+
+</html>
+
+<!-- <div class="links">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#products">products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+            <a href="#blogs">blogs</a>
+        </div> -->
